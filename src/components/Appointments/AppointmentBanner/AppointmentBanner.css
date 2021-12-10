@@ -1,0 +1,6 @@
+@media only screen and (max-width: 425px){
+    #appointment{
+        margin-top: 20%;
+        font-size: 2rem;
+    }
+}

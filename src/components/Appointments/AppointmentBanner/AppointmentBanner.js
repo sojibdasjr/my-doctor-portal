@@ -2,6 +2,7 @@ import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import chairImg from '../../../images/chair.png'
 import Calendar from './Calendar';
+import './AppointmentBanner.css'
 
 const AppointmentBanner = ({date, setDate}) => {
 
@@ -17,7 +18,7 @@ const AppointmentBanner = ({date, setDate}) => {
             <Container>
                 <Grid container spacing={3}>
                     <Grid item xs={12} sm={12} md={6} lg={6}>
-                        <Typography variant='h3'>Appointment</Typography>
+                        <Typography id="appointment" variant='h3'>Appointment</Typography>
                         <Calendar date={date} setDate={setDate} />
                     </Grid>
 

@@ -25,9 +25,9 @@ export default function Navigation() {
           <Typography className='nav-title' variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Doctor Portal
           </Typography>
-          <Link  to ='/home'><Button color="inherit">Home</Button></Link>
-          <Link to ='/appointment'><Button color="inherit">Appointment</Button></Link>
-          <Button color="inherit">Login</Button>
+          <Link className='nav-text'  to ='/home'><Button color="inherit">Home</Button></Link>
+          <Link className='nav-text'  to ='/appointment'><Button color="inherit">Appointment</Button></Link>
+          <Link className='nav-text'  to = '/login'><Button color="inherit">Login</Button></Link>
         </Toolbar>
       </AppBar>
     </Box>

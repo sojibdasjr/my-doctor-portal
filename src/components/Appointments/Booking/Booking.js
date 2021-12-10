@@ -1,10 +1,9 @@
-import { Container, Grid, Typography } from '@mui/material';
+import { Container, Grid, Paper, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 import AOS from 'aos'
 import MuiButton from '../../../StyledComponent/MuiButton';
 import { bookings } from '../../data/data';
 import 'aos/dist/aos.css';
-import Tilt from 'react-vanilla-tilt'
 import AppointmentModal from '../AppointmentModal/AppointmentModal';
 
 const Booking = ({date}) => {
@@ -22,7 +21,7 @@ const Booking = ({date}) => {
     });
 
     const sytle = {
-        padding:3, 
+        padding:5, 
         display:'flex', 
         justifyContent:'center'
     }
@@ -31,11 +30,11 @@ const Booking = ({date}) => {
             <Typography paddingY='3%' color="#1CC7C1" textAlign="center" fontWeight='500' variant='h4'>Availabel Appointemt on {new Date(date).toDateString()}</Typography>
 
            
-            <Grid container spacing={3}>
+            <Grid container spacing={3} padding="5%">
                 {
-                    bookings.map(({id,name, time, space})=><Grid data-aos="zoom-out-up" key={id} item xs={12} sm={12} md={4} lg={4} >
+                    bookings.map(({id,name, time, space})=><Grid data-aos="zoom-out-up" key={id} item xs={12} sm={12} md={6} lg={4}>
 
-                    <Tilt>
+                    <Paper elevation={3} sx={{padding:2}}>
                         <div style={sytle}>
                             <div>
                             <Typography fontWeight='500' color="#1CC7C1" variant='h5'>{name}</Typography>
@@ -45,7 +44,7 @@ const Booking = ({date}) => {
                         
                             </div>
                         </div> 
-                    </Tilt> 
+                    </Paper> 
                     <AppointmentModal date={date} name={name} time={time} handleClose={handleClose} open={open} />
                     </Grid>)}
             </Grid>
