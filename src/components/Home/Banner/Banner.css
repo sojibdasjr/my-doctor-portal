@@ -1,0 +1,17 @@
+.side-background::after{
+    height: 107%;
+    content: " ";
+    position: absolute;
+    top: 0;
+    width: 33%;
+    right: 0;
+    background-color: #3a4256;
+    z-index: -50;
+    
+}
+
+@media only screen and (max-width: 425px){
+    .side-background::after {
+       display: none;
+    }
+}

@@ -1,0 +1,21 @@
+.paper-card:hover{
+    background: linear-gradient(75deg, rgba(255, 255, 255, 0.1),#0fcfec);
+ 
+   
+}
+.paper-card:hover img{
+   visibility: hidden;
+    display: none;
+   position: absolute;
+
+}
+
+.paper-card:hover .title_text{
+    visibility: hidden;
+    
+   
+}
+
+
+
+
